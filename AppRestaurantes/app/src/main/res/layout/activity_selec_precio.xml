@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_pizarra"
+    tools:context=".selecPrecio">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="290dp"
+        android:layout_height="412dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btVolverSP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/logo1" />
+
+        <Button
+            android:id="@+id/bt15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hasta 15 €" />
+
+        <Button
+            android:id="@+id/bt1525"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ENTRE 15-25 €" />
+
+        <Button
+            android:id="@+id/bt2550"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ENTRE 25-50 €" />
+
+        <Button
+            android:id="@+id/bt50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MAS DE 50€" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btVolverSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="129dp"
+        android:onClick="volver"
+        android:text="Volver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+</androidx.constraintlayout.widget.ConstraintLayout>

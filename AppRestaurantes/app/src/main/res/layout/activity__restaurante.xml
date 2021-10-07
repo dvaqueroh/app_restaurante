@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_Restaurante">
+
+    <LinearLayout
+        android:layout_width="391dp"
+        android:layout_height="644dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            app:srcCompat="@drawable/logo1" />
+
+        <LinearLayout
+            android:id="@+id/loDatos"
+            android:layout_width="318dp"
+            android:layout_height="309dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ResNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nombre"
+                android:textSize="30sp" />
+
+            <RatingBar
+                android:id="@+id/rbRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="5"
+                android:numStars="5" />
+
+            <TextView
+                android:id="@+id/ResCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Categoria"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ResPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Precio"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ResComentario"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:text="comentario"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ResDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="direccion"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/ResTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="telefono"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/lBotones"
+                android:layout_width="242dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btLlamar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="Llamar"
+                    app:srcCompat="@android:drawable/sym_action_call" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="            " />
+
+                <ImageButton
+                    android:id="@+id/btFavorito"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selec_favorito"
+
+                    android:clickable="false"
+                    android:onClick="marcarFavorito" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btResVolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="05dp"
+            android:layout_marginBottom="05dp"
+            android:onClick="volver"
+            android:text="Volver" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

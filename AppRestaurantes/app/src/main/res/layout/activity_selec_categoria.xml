@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_pizarra"
+    tools:context=".selecCategoria">
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="346dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginBottom="64dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btCatVolver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="62dp"
+            android:text="elige la categoria a filtar"
+            android:textColor="#00899A"
+            android:textColorLink="#6B5AFFC8"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etSelCat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/crafty_girls"
+            android:hint="Categoria"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="14sp"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spSelCat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00B18B" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btCatVolver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="133dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="112dp"
+        android:onClick="volver"
+        android:text="VOLVER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/fondovacio">
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="imgLogo1,lyoBotones"
+        tools:layout_editor_absoluteX="6dp" />
+
+
+    <ImageView
+        android:id="@+id/imgLogo1"
+        android:layout_width="279dp"
+        android:layout_height="207dp"
+        android:layout_marginTop="60dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="logoMain"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/lyoBotones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo1" />
+
+    <LinearLayout
+        android:id="@+id/lyoBotones"
+        android:layout_width="424dp"
+        android:layout_height="423dp"
+        android:layout_marginBottom="50dp"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo1">
+
+        <Button
+            android:id="@+id/btMisRestaurantes"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="misRestaurantes"
+            android:text="Mis Restaurantes"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bk_boton_plano"
+            android:stateListAnimator="@null" />
+
+        <Button
+            android:id="@+id/btFavoritos"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bk_boton_plano"
+            android:onClick="porFavoritos"
+            android:text="FAVORITOS" />
+
+        <Button
+            android:id="@+id/btTipo"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bk_boton_plano"
+            android:onClick="porCategoria"
+            android:text="Por Categoria" />
+
+        <Button
+            android:id="@+id/btPrecio"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bk_boton_plano"
+            android:onClick="PorPrecio"
+            android:text="Por Precio" />
+
+        <Button
+            android:id="@+id/btNuevo"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bk_boton_plano"
+            android:onClick="Nuevo"
+            android:text="Nuevo Restaurante" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

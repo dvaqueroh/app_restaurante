@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_pizarra"
+    tools:context=".NuevoRestaurante">
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="tv1,linearLayout,tableBotones"
+        tools:layout_editor_absoluteX="411dp" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="391dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="cursive"
+        android:text="Añade un restaurante"
+        android:textAlignment="center"
+        android:textColor="#00B7FF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="387dp"
+        android:layout_height="418dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="18dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tableBotones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1">
+
+        <EditText
+            android:id="@+id/etNombreRest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/crafty_girls"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:typeface="normal" />
+
+        <EditText
+            android:id="@+id/etCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoText="true"
+            android:editable="false"
+            android:ems="10"
+            android:enabled="false"
+            android:fontFamily="@font/crafty_girls"
+            android:hint="Categoria"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:typeface="normal"
+            android:visibility="visible" />
+
+        <Spinner
+            android:id="@+id/spCategoria"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:dropDownSelector="@drawable/tablamantel"
+            android:foreground="@color/teal_200"
+            android:padding="5dip"
+            android:scrollbarThumbHorizontal="@color/teal_700"
+            android:scrollbarThumbVertical="@color/teal_700"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/etPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/crafty_girls"
+            android:hint="Precio"
+            android:inputType="number"
+            android:lineSpacingExtra="8sp"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:typeface="normal" />
+
+        <EditText
+            android:id="@+id/etDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/crafty_girls"
+            android:hint="Direccion"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:maxLines="2"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:typeface="normal" />
+
+        <EditText
+            android:id="@+id/etTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="9"
+            android:fontFamily="@font/crafty_girls"
+            android:hint="Telefono"
+            android:inputType="number|phone"
+            android:lineSpacingExtra="8sp"
+            android:maxEms="9"
+            android:selectAllOnFocus="false"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:typeface="normal" />
+
+        <EditText
+            android:id="@+id/etComentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="@font/crafty_girls"
+            android:gravity="start|top"
+            android:hint="Comentario (max 2 lineas)"
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="8sp"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"
+            android:textColor="@color/white"
+            android:textColorHint="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            android:typeface="normal" />
+
+        <RatingBar
+            android:id="@+id/rbValoracion"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:background="#21F49F"
+            android:drawingCacheQuality="auto"
+            android:fadingEdge="horizontal"
+            android:foregroundGravity="fill_horizontal|bottom"
+            android:max="5"
+            android:numStars="5"
+            android:rating="0"
+            android:stepSize="1"
+            android:visibility="visible"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableBotones"
+        android:layout_width="299dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btCrear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="guardar"
+                android:text="Guardar" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btLimpiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="limpiar"
+                android:text="Limpar" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btVolver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="volver"
+                android:text="Volver" />
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
